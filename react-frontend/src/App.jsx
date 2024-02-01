@@ -1,32 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import SearchForm from './SearchForm'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://www.brandmonitor.com.br/" target="_blank">
+          <img src={'https://assets-global.website-files.com/605b962d5e846a3de31701a8/6495de9d500d8383c085a8fb_brandmonitor-logo-dark.svg'} className="logo" alt="BrandMonitor logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Simulador de Pesquisas Google</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <SearchForm />
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Case Técnico BrandMonitor 2024
       </p>
     </>
   )
