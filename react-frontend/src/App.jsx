@@ -1,7 +1,14 @@
-import SearchForm from './SearchForm'
+import { useState } from 'react'
+import SearchForm from './components/SearchForm'
+import Notification from './components/Notification'
+
 import './App.css'
 
 function App() {
+
+  const [notification, setNotification] = useState({ isVisible: false, type: true, message: "" })
+
+  const { isVisible, message, type } = notification;
 
   return (
     <>
@@ -11,8 +18,9 @@ function App() {
         </a>
       </div>
       <h1>Simulador de Pesquisas Google</h1>
+      {isVisible && <Notification message={message} type={type} />}
       <div className="card">
-        <SearchForm />
+        <SearchForm notification={notification} setNotification={setNotification} />
       </div>
       <p className="read-the-docs">
         Case Técnico BrandMonitor 2024
